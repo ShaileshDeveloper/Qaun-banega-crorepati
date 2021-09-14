@@ -1,0 +1,120 @@
+.App {
+  height: 100vh;
+  display: flex;
+  background-color: #020230;
+  color: white;
+}
+
+.main_container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  height: 50%;
+  position: relative;
+}
+
+.bottom {
+  height: 50%;
+}
+.side_container {
+  width: 25%;
+  display: flex;
+  align-items: center;
+}
+.money-list {
+  list-style: none;
+  width: 100%;
+  padding: 20px;
+}
+.money-list-item {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+.money-list-item.active {
+  background-color: teal;
+}
+
+.money-list-item-number {
+  font-size: 18px;
+  font-weight: 100px;
+  width: 30%;
+}
+.money-list-item-amount {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.quiz {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 200px;
+}
+.question {
+  width: 80%;
+  background: linear-gradient(#100241, black);
+  border: 2px solid white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 20;
+}
+
+.answers {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.answer {
+  width: 40%;
+  padding: 10px;
+  text-align: center;
+  background: linear-gradient(#0e0124, #22074d);
+  border: 1px solid white;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0 10px 20px 10px;
+  cursor: pointer;
+}
+
+.answer:hover,
+.answer.active {
+  background: mediumblue;
+}
+
+.answer.correct {
+  animation: correct 3s ease forwards;
+}
+
+@keyframes correct {
+  0% {
+    background: mediumblue;
+  }
+  50%,
+  100% {
+    background: green;
+  }
+}
+.answer.wrong {
+  animation: wrong 2s ease forwards;
+}
+
+@keyframes wrong {
+  0% {
+    background: mediumblue;
+  }
+  50%,
+  100% {
+    background: red;
+  }
+}
